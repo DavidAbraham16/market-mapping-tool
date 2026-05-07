@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Mapping Tool</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400&display=swap');
+  :root{
+    --navy:#1F3864;--blue:#2E75B6;--light:#D6E4F7;--bg:#F4F6FA;
+    --white:#fff;--border:#DDE3EE;--text:#1a2540;--muted:#6B7A99;
+    --green:#375623;--greenbg:#E2EFDA;--red:#9C0006;--redbg:#FCE4D6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);}
+  header{background:var(--navy);color:white;padding:18px 28px;display:flex;justify-content:space-between;align-items:center;}
+  header h1{font-size:16px;font-weight:600;}
+  header p{font-size:11px;opacity:.6;font-family:'DM Mono',monospace;}
+  .wrap{max-width:900px;margin:0 auto;padding:24px 16px;}
+
+  .info{background:var(--light);border:1px solid #b3cfe8;border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:13px;color:var(--navy);line-height:1.7;}
+  .info strong{font-weight:600;}
+
+  .card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:14px;}
+  .card-title{font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;}
+
+  label{display:block;font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:500;}
+  input[type=text],input[type=url]{width:100%;font-family:'DM Sans',sans-serif;font-size:13px;border:1px solid var(--border);border-radius:7px;padding:8px 11px;color:var(--text);}
+  input:focus{outline:none;border-color:var(--blue);}
+
+  .company-block{border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden;}
+  .co-head{background:#F0F4FB;padding:11px 14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+  .co-head span{font-size:13px;font-weight:500;color:var(--navy);}
+  .co-body{padding:14px;}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+
+  .divider{border:none;border-top:1px dashed var(--border);margin:14px 0;}
+  .profiles-title{font-size:11px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;}
+
+  .profile-card{background:#FAFBFE;border:1px solid var(--border);border-radius:7px;padding:11px;margin-bottom:8px;}
+  .profile-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .profile-card-label{font-size:11px;font-weight:600;color:var(--blue);}
+  textarea{width:100%;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:6px;padding:8px 10px;resize:vertical;min-height:90px;line-height:1.6;}
+  textarea:focus{outline:none;border-color:var(--blue);color:var(--text);}
+  textarea::placeholder{color:#b8c0d0;}
+
+  .btn{padding:7px 16px;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:var(--white);color:var(--text);transition:all .15s;}
+  .btn:hover{background:var(--bg);}
+  .btn-sm{padding:4px 10px;font-size:11px;}
+  .btn-danger{color:#c0392b;border-color:#e8c4c4;background:#fff5f5;}
+  .btn-danger:hover{background:#ffe0e0;}
+  .btn-dashed{border-style:dashed;color:var(--muted);}
+  .btn-dashed:hover{border-color:var(--blue);color:var(--blue);}
+  .btn-blue{background:var(--blue);color:white;border-color:var(--blue);}
